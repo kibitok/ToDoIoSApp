@@ -176,14 +176,17 @@ class ToDoTableViewController: UITableViewController, MCSessionDelegate, MCBrows
         return cell
     }
     
+    @IBAction func button1(_ sender: Any) {
+        
+    }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        let shareAction = UITableViewRowAction(style: .normal, title: "Share") { (action:UITableViewRowAction, indexPath:IndexPath) in
+        /*let shareAction = UITableViewRowAction(style: .normal, title: "Share") { (action:UITableViewRowAction, indexPath:IndexPath) in
             let todoItem = self.todoItems[indexPath.row]
             self.sendTodo(todoItem)
         }
-        shareAction.backgroundColor = UIColor(named: "mainBlueColor")
+        shareAction.backgroundColor = UIColor(named: "mainBlueColor")*/
         
         let deleteAction = UITableViewRowAction(style: .normal
         , title: "Delete") { (action:UITableViewRowAction, indexPath:IndexPath) in
@@ -193,7 +196,7 @@ class ToDoTableViewController: UITableViewController, MCSessionDelegate, MCBrows
         }
         deleteAction.backgroundColor = UIColor(named: "mainYellowColor")
         
-        return [deleteAction, shareAction]
+        return [deleteAction]
         
         
     }

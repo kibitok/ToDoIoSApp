@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PJA-gm-KPD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PJA-gm-KPD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MY LIST-->
+        <!--Todays Agenda-->
         <scene sceneID="jXJ-Mx-INU">
             <objects>
                 <tableViewController id="CAH-Dg-tK3" customClass="ToDoTableViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ToDo Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ur-nb-95t">
-                                            <rect key="frame" x="23" y="14" width="336" height="21"/>
+                                            <rect key="frame" x="23" y="15" width="336" height="21"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -52,7 +52,17 @@
                             <outlet property="delegate" destination="CAH-Dg-tK3" id="GSF-di-yC0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="MY LIST" id="b4K-nI-4p6"/>
+                    <navigationItem key="navigationItem" title="Todays Agenda" id="b4K-nI-4p6">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Cwm-7Z-rbW">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="9gv-p1-7Gv">
+                                <rect key="frame" x="308" y="6.5" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="button1:" destination="CAH-Dg-tK3" eventType="valueChanged" id="pj5-te-Avb"/>
+                                </connections>
+                            </switch>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="progressBar" destination="Cbg-sF-5yc" id="fLQ-J4-M6U"/>
                     </connections>
@@ -154,7 +164,7 @@
     </scenes>
     <resources>
         <namedColor name="mainBlueColor">
-            <color red="0.0" green="0.82700002193450928" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.6470588235294118" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
